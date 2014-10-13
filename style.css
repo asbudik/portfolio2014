@@ -267,12 +267,30 @@ body {
 }
 
 @media (max-width: 990px) {
+  .icons {
+    width: 203px;
+  }
   .allapps {
-    height: 1000px;
+    height: 1500px;
   }
   .specialties {
     border: none;
     border-bottom: 1px solid grey;
     margin-bottom: 10px;
+  }
+  body {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.8em;
+  }
+  .profiletext {
+    font-size: 1.5em;
+  }
+  li {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.8em;
   }
 }
