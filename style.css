@@ -148,7 +148,7 @@ body {
 .demoholder {
   width: 80%;
   margin: 0 auto;
-  margin-top: 10px;
+  padding-top: 10px;
   min-width: 450px;
 }
 .demothumbnails {
