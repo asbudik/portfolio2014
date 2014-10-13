@@ -271,7 +271,7 @@ body {
     width: 203px;
   }
   .allapps {
-    height: 1900px;
+    height: 1820px;
   }
   .me {
     width: 95%;
@@ -351,7 +351,7 @@ body {
     font-size: 1.5em;
   }
   .appheader {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
   }
   .demowall {
     width: 95%;
@@ -387,7 +387,7 @@ body {
   .appheader {
     width: 97%;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .specialties {
     padding-bottom: 40px;
