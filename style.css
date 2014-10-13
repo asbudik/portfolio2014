@@ -381,6 +381,12 @@ body {
     text-align: center;
     font-size: 1.4em;
   }
+  .otherbreaks {
+    border: 2px solid grey;
+  }
+  .specialties {
+    padding-bottom: 40px;
+  }
   .specialheader h4{
     font-size: 1.8em;
   }
