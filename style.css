@@ -395,4 +395,7 @@ body {
   .specialheader h4{
     font-size: 1.8em;
   }
+  .footer {
+    height: 0px;
+  }
 }
