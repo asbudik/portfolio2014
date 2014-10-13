@@ -19,7 +19,7 @@ body {
 }
 .link {
   display: inline-block;
-  width: 8%;
+  width: 115px;
   min-width: 65px;
   text-align: center;
   height: 100%;
@@ -148,7 +148,7 @@ body {
 .demoholder {
   width: 80%;
   margin: 0 auto;
-  padding-top: 10px;
+  margin-top: 10px;
   min-width: 450px;
 }
 .demothumbnails {
