@@ -20,19 +20,22 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <script src="javascript.js"></script>
+  <script src="vendor/angular.js"></script>
+  <script src="portfolio_app/main.js"></script>
+  <script data-require="angular-animate@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
 </head>
 
-<body>
+<body ng-app="PortfolioApp" ng-controller="PortfolioCtrl">
   <div class="navbar">
     <a href="#profile" data-offset="100"><div class="link"><span class="linktext">Profile</span></div></a>
-    <a href="#apps" data-offset="100"><div class="link"><span class="linktext">My Apps</span></div></a>
-    <a href="#skills"><div class="link"><span class="linktext">My Skills</span></div></a>
-    <div class="link logo"><span class="ab">AB</span></div>
+    <a href="#apps" data-offset="100"><div class="link"><span class="linktext">Projects</span></div></a>
+    <a href="#skills"><div class="link"><span class="linktext">Skills</span></div></a>
+    <a href="#top"><div class="link logo"><span class="ab">AB</span></div></a>
     <a href="#education"><div class="link"><span class="linktext">Education</span></div></a>
     <a href="#specialties"><div class="link"><span class="linktext">Specialties</span></div></a>
     <a href="#contact"><div class="link"><span class="linktext">Contact</span></div></a>
   </div>
-  <div class="container">
+  <div class="container" id="top">
     <div class="header" id="contact" name="contact">
       <h1 class="title">Adam Budik</h1>
       <div class="break"></div>
@@ -67,11 +70,11 @@
       </div>
       <div class="col-md-offset-2 col-md-5">
         <div class="wordsaboutme">
-          <p>"I am a truly passionate and creative individual. Web development has become my medium to bring quality products to realization. You could almost say I've become obsessed with web development, as I spend every chance I get eagerly discovering new technologies and look forward to applying my new findings to new projects. I am certainly self starter and consistently integrate my acute attention to detail and well designed code for each and every creation."</p>
+          <p>"I am a truly passionate and creative individual. Web development has become my medium to bring quality products to realization. You could almost say I've become obsessed with web development, as I spend every chance I get eagerly discovering new technologies and look forward to applying my new findings to new projects. I am certainly self starter and consistently integrate my acute attention to detail and well designed code for each and every creation."<span id="skills"></span></p>
         </div>
       </div>
     </div>
-    <h1 class="profile" id="skills" name="skills">Technical Skill Set</h1>
+    <h1 class="profile">Technical Skill Set</h1>
     <div class="otherbreaks"></div>
     <div class="skillset">
       <h3 class="subskills">Web Development Skills</h2>
@@ -92,10 +95,10 @@
       <ul type="square">
         <li>Photoshop</li>
         <li>Data Entry</li>
-        <li>Microsoft Office Suite</li>
+        <li>Microsoft Office Suite<span id="education"</li>
       </ul>
     </div>
-    <h1 class="education" id="education" name="education">Education</h1>
+    <h1 class="education">Education</h1>
     <div class="otherbreaks"></div>
     <div class="educationals">
       <h3 class="subskills">General Assembly of San Francisco</h3>
@@ -109,97 +112,43 @@
       <p class="educationdesc">Working towards AAS in Business Administration, Accounting <span class="educationyear">2009</span></p>
     </div>
   </div>
-  <div class="allapps" id="apps" name="apps">
+  <div id="apps" id="backtoapps"></div>
+
+  <div class="allapps">
     <div class="row appshow">
       <div class="col-md-offset-1 col-md-3">
         <div class="appheader">
           <div class="apptitle">
-            <h3>RubySound</h3>
-            <a href="http://rubysound.herokuapp.com">Demo RubySound Here</a>
+            <h3>{{apps[index].title}}</h3>
+            <a href="{{apps[index].heroku}}">Demo {{apps[index].title}} Here</a>
           </div>
           <h4>Summary</h4>
           <div class="otherbreaks"></div>
-          <p>Listen to RubySound’s user picked and cultivated playlists. Users can search for songs to load into a queue, and can also vote on which song plays next.</p>
+          <p>{{apps[index].summary}}</p>
           <h4>Breakdown</h4>
           <div class="otherbreaks"></div>
-          <p>"Having a custom media player with a dynamically changing playlist, all to be updated in realtime, brought on a lot of corner cases that required immediate resolution. This app gave me a lot of insight to the power of both AngularJS and Socket.io, and I look forward to creating more applications with these tools."</p>
+          <p>"{{apps[index].breakdown}}"</p>
           <h4>Tools</h4>
           <div class="otherbreaks"></div>
-          <p class="tools">HTML5, CSS3, AngularJS, NodeJS, Express & Sequelize, PostgreSQL, Passport & Bcrypt, Socket.io, Soundcloud API, Bandsintown API, Spotify API, Grunt, AJAX</p>
+          <p class="tools">{{apps[index].tools}}</p>
         </div>
       </div>
-      <div class="col-md-7">
-        <img class="demopic" src="./assets/rubysounddemo.png">
-      </div>
-    </div>
-    <div class="row appshow">
-      <div class="col-md-offset-1 col-md-3">
-        <div class="appheader">
-          <div class="apptitle">
-            <h3>GA Dashboard</h3>
-            <a href="http://ga-dashboard.herokuapp.com">Demo GA Dashboard Here</a>
+      <div class="col-md-7 demowall">
+        <img class="demopic" src="./assets/{{apps[index].imagecss}}.png">
+        <div class="demoholder">
+          <div class="demothumbnails" ng-click="" ng-repeat="app in apps">
+            <a href="#apps" ng-click="newDemo($index)">
+              <img class="demopicnails" src="./assets/{{app.imagecss}}.png">
+              <h6>{{app.title}}</h6>
+            </a>
           </div>
-          <h4>Summary</h4>
-          <div class="otherbreaks"></div>
-          <p>Dashboard designed for General Assembly users. A collaborative effort of both myself and another alum. GA Dashboard comes with tons of neat features for the students and faculty located at General Assembly in San Francisco.</p>
-          <h4>Breakdown</h4>
-          <div class="otherbreaks"></div>
-          <p>"GA Dashboard was a fantastic experience of pair programming with another alum to design a rather cool product. Using tons of new tools, GA Dashboard is jam-packed with all of the information anyone in the SoMa district would gladly appreciate, from transportation, to food, to events. Even the weather!"</p>
-          <h4>Tools</h4>
-          <div class="otherbreaks"></div>
-          <p class="tools">HTML5, CSS3/Sass, Ruby on Rails, Nokogiri, AWS S3, Twitter REST API, BART API, OpenWeather API, Arduino (Dino), Rufus Scheduler, AJAX</p>
         </div>
-      </div>
-      <div class="col-md-7">
-        <img class="demopic" src="./assets/dashboarddemo.png">
-      </div>
-    </div>
-    <div class="row appshow">
-      <div class="col-md-offset-1 col-md-3">
-        <div class="appheader">
-          <div class="apptitle">
-            <h3>Groove For Me</h3>
-            <a href="http://asbudik.github.io/craftymusic">Demo Groove For Me Here</a>
-          </div>
-          <h4>Summary</h4>
-          <div class="otherbreaks"></div>
-          <p>Groove to this colorful rhythm game inspired by DDR. Shoot for your high score with precise key press, combo gauge, and accuracy.</p>
-          <h4>Breakdown</h4>
-          <div class="otherbreaks"></div>
-          <p>"Groove For Me really gave me the opportunity to explore a plethora of diverse javascript libraries, and allowed me to craft efficient methods for reading through their documentation. Groove For Me really allowed me to breathe life into a fun and high speed rhythm game."</p>
-          <h4>Tools</h4>
-          <div class="otherbreaks"></div>
-          <p class="tools">HTML5, CSS3, CraftyJS</p>
-        </div>
-      </div>
-      <div class="col-md-7">
-        <img class="demopic" src="./assets/craftymusicdemo.png">
-      </div>
-    </div>
-    <div class="appshow row">
-      <div class="col-md-offset-1 col-md-3">
-        <div class="appheader">
-          <div class="apptitle">
-            <h3>Post-a-Pic</h3>
-            <a href="http://asbpostapic.herokuapp.com">Demo Post-a-Pic Here</a>
-          </div>
-          <h4>Summary</h4>
-          <div class="otherbreaks"></div>
-          <p>Seamlessly search for photos to upload to Twitter in two easy steps. Gone are the days of tedious image uploading.</p>
-          <h4>Breakdown</h4>
-          <div class="otherbreaks"></div>
-          <p>"Post-a-Pic was spawned from the belief that the world should be convenient. Uploading media to Oauth'd user's accounts became tricky due to the nature of Twitter's media policies; having to convert image links to binary data before upload was certainly a new experience that I'm glad I didn't pass up."</p>
-          <h4>Tools</h4>
-          <div class="otherbreaks"></div>
-          <p class="tools">HTML5, CSS3, NodeJS, Express & Sequelize, PostgreSQL, Twitter REST API, Memegenerator API, Flickr API, OAuth</p>
-        </div>
-      </div>
-      <div class="col-md-7">
-        <img class="demopic" src="./assets/postapicdemo2.png">
       </div>
     </div>
   </div>
-  <div class="container offers" id="specialties" name="specialties">
+
+  <div id="specialties"></div>
+  <div class="row container offers">
     <h2 class="special">Specialties</h2>
     <div class="otherbreaks"></div>
     <div class="col-md-4 specialties">
