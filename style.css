@@ -293,4 +293,26 @@ body {
   h2 {
     font-size: 1.8em;
   }
+  .whatami {
+    font-size: 1.8em;
+  }
+  .phonenum, .email {
+    font-size: 1.6em;
+  }
+  .profile, .education {
+    font-size: 2.9em;
+  }
+  .skillset .subskills, .skillset .subskills2 {
+    font-size: 2.0em;
+  }
+  .educationals .subskills, .educationals .subskills2 {
+    font-size: 1.5em;
+  }
+  .educationals li {
+    font-size: 1.3em;
+  }
+  .educationdesc, .educationyear {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
 }
