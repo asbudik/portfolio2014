@@ -143,7 +143,7 @@ body {
   box-shadow: 2px 5px 20px #323232, -2px -1px 20px #323232;
 }
 .allapps {
-  height: 680px;
+  height: 760px;
 }
 .demoholder {
   width: 80%;
@@ -260,10 +260,19 @@ body {
 }
 
 #specialties {
-  height: 100px;
-  width: 100%;
 }
 #apps {
   height: 100px;
   width: 100%;
+}
+
+@media (max-width: 990px) {
+  .allapps {
+    height: 1000px;
+  }
+  .specialties {
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+  }
 }
