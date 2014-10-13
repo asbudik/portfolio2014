@@ -28,14 +28,14 @@
 <body ng-app="PortfolioApp" ng-controller="PortfolioCtrl">
   <div class="navbar">
     <a href="#profile" data-offset="100"><div class="link"><span class="linktext">Profile</span></div></a>
-    <a href="#apps" data-offset="100"><div class="link"><span class="linktext">Projects</span></div></a>
-    <a href="#skills"><div class="link"><span class="linktext">Skills</span></div></a>
+    <a href="#apps" data-offset="100"><div class="link"><span class="linktext">Education</span></div></a>
+    <a href="#skills"><div class="linkskills link"><span class="linktext">Skills</span></div></a>
     <a href="#top"><div class="link logo"><span class="ab">AB</span></div></a>
-    <a href="#education"><div class="link"><span class="linktext">Education</span></div></a>
+    <a href="#education"><div class="linkeducation link"><span class="linktext">Projects</span></div></a>
     <a href="#specialties"><div class="link"><span class="linktext">Specialties</span></div></a>
     <a href="#contact"><div class="link"><span class="linktext">Contact</span></div></a>
   </div>
-  <div class="container" id="top">
+  <div class="container me" id="top">
     <div class="header" id="contact" name="contact">
       <h1 class="title">Adam Budik</h1>
       <div class="break"></div>
@@ -65,7 +65,7 @@
     <div class="otherbreaks"></div>
     <p class="profiletext">Adam Budik is a Las Vegas native, who jumped on the opportunity to make it big in the San Francisco Bay Area. Looking to apply both strong social relations and full stack web development training, he now pursues opportunities as a full stack web developer.</p>
     <div class="row">
-      <div class="col-md-offset-1 col-md-3">
+      <div class="col-md-offset-1 col-md-3 profpic">
         <div class="profilepic"><img class="profilepicture" src="./assets/profpic.jpg" height="200" width="200"></div>
       </div>
       <div class="col-md-offset-2 col-md-5">
@@ -151,21 +151,21 @@
   <div class="row container offers">
     <h2 class="special">Specialties</h2>
     <div class="otherbreaks"></div>
-    <div class="col-md-4 specialties">
+    <div class="col-md-4 specialties specialmob">
       <div class="specialheader">
         <img src="./assets/webdesign.png" height="100" width="100">
         <h4>Web Design</h4>
       </div>
       <p>I absolutely adore the chance to design new products. There's a certain charm about crafting new and exciting projects from the ground up. I take particular care to ensure each and every design is structured with the highest care.</p>
     </div>
-    <div class="col-md-4 specialties">
+    <div class="col-md-4 specialties specialmob">
       <div class="specialheader">
         <img src="./assets/icon_frontend.png" height="100" width="100">
         <h4>Front End Web Development</h4>
       </div>
       <p>I bring with me a strong front end arsenal with proficiency in AngularJS, Javascript, and JQuery. I aim for responsive, eye-catching applications and quality web code for a superb user experience.</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 specialmob">
       <div class="specialheader">
         <img src="./assets/backend.png" height="100" width="100">
         <h4>Back End Web Development</h4>

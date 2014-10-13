@@ -271,7 +271,11 @@ body {
     width: 203px;
   }
   .allapps {
-    height: 1500px;
+    height: 1800px;
+  }
+  .me {
+    width: 95%;
+    margin: 0 auto;
   }
   .specialties {
     border: none;
@@ -295,6 +299,7 @@ body {
   }
   .whatami {
     font-size: 1.8em;
+    margin-bottom: 40px;
   }
   .phonenum, .email {
     font-size: 1.6em;
@@ -318,5 +323,65 @@ body {
   .educationyear {
     font-size: 0.9em;
     color: #191919;
+  }
+  .link {
+    font-size: 1.3em;
+  }
+  .link:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .profpic {
+    height: 200px;
+    width: 390px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .linkeducation {
+    padding-left: 20px;
+    margin-right: 10px;
+  }
+  .apptitle h3{
+    font-size: 2.9em;
+  }
+  .appheader h4 {
+    margin-top: 30px;
+    font-size: 2.5em;
+  }
+  .tools {
+    font-size: 1.5em;
+  }
+  .appheader {
+    margin-bottom: 100px;
+  }
+  .demowall {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .demopicnails {
+    width: 180px;
+    height: 120px;
+  }
+  a h6 {
+    font-size: 1.3em;
+  }
+  .demothumbnails {
+    width: 21%;
+  }
+  .demoholder {
+    width: 95%;
+  }
+  .special {
+    font-size: 2.9em;
+  }
+  .specialheader {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .specialmob p {
+    text-align: center;
+    font-size: 1.4em;
+  }
+  .specialheader h4{
+    font-size: 1.8em;
   }
 }
