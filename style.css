@@ -265,7 +265,12 @@ body {
   height: 100px;
   width: 100%;
 }
-
+.thumbfade0, .thumbfade1, .thumbfade2, .thumbfade3 {
+  opacity: .7;
+}
+.thumbfade0:hover, .thumbfade1:hover, .thumbfade2:hover, .thumbfade3:hover {
+  opacity: 1;
+}
 @media (max-width: 992px) {
   .container {
     min-width: 990px;
@@ -327,6 +332,9 @@ body {
     font-size: 0.9em;
     color: #191919;
   }
+  .thumbfade0, .thumbfade1, .thumbfade2, .thumbfade3 {
+  opacity: .9;
+}
   .link {
     font-size: 1.3em;
   }
