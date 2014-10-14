@@ -118,10 +118,12 @@
     <div class="row appshow">
       <div class="col-md-offset-1 col-md-3">
         <div class="appheader">
+          <a href="{{apps[index].heroku}}" target="_blank">
           <div class="apptitle">
             <h3>{{apps[index].title}}</h3>
-            <a href="{{apps[index].heroku}}">Demo {{apps[index].title}} Here</a>
+              <span>Demo {{apps[index].title}} Here</span>
           </div>
+          </a>
           <h4>Summary</h4>
           <div class="otherbreaks"></div>
           <p>{{apps[index].summary}}</p>
@@ -139,7 +141,7 @@
           <div class="demothumbnails" ng-click="" ng-repeat="app in apps">
             <div class="thumbfade{{$index}}">
             <a href="#apps" ng-click="newDemo($index)">
-              <img class="demopicnails" src="./assets/{{app.imagecss}}.png">
+              <img class="demopicnails" src="./assets/{{app.imagecss}}.png" height="80" width="130">
               <h6 class="thumbtitle">{{app.title}}</h6>
             </a>
             </div>
