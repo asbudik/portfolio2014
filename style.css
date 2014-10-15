@@ -285,7 +285,7 @@ a:hover {
   }
   .navbar {
     position: relative;
-    margin-bottom: 0;
+    margin: 0;
   }
   .icons {
     width: 203px;
